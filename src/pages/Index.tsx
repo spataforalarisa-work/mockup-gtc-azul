@@ -6,7 +6,7 @@ const STATS = [
   { value: '49', label: 'empresas activas', color: 'text-blue-prime' },
   { value: '103', label: 'profesionales', color: 'text-blue-prime' },
   { value: '60%', label: 'ahorro promedio', color: 'text-gold' },
-  { value: '95%', label: 'retencion', color: 'text-gold' },
+  { value: '95%', label: 'retención', color: 'text-gold' },
 ]
 
 const CLIENTS = [
@@ -17,13 +17,13 @@ const CLIENTS = [
 const ADVANTAGES = [
   {
     icon: Zap,
-    title: 'Match en 15 dias',
-    description: 'De la primera llamada a tu asistente operando. Pruebas tecnicas, shortlist de 2-3 candidatos, tu eliges.',
+    title: 'Match en 15 días',
+    description: 'De la primera llamada a tu asistente operando. Pruebas técnicas, shortlist de 2-3 candidatos, tú eliges.',
   },
   {
     icon: Brain,
-    title: 'Seleccion rigurosa',
-    description: 'Menos del 5% de tasa de aceptacion. +11.000 candidatos validados con pruebas tecnicas y conductuales.',
+    title: 'Selección rigurosa',
+    description: 'Menos del 5% de tasa de aceptación. +11.000 candidatos validados con pruebas técnicas y conductuales.',
   },
   {
     icon: Handshake,
@@ -48,7 +48,7 @@ export default function HomePage() {
               para empresas que quieren crecer sin complicaciones.
             </h1>
             <p className="text-white/60 text-lg md:text-2xl mb-12 max-w-2xl font-light">
-              Conectamos empresas europeas con profesionales latinoamericanos de alto rendimiento. Seleccion, gestion y supervision integral.
+              Conectamos empresas europeas con profesionales latinoamericanos de alto rendimiento. Selección, gestión y supervisión integral.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -92,7 +92,7 @@ export default function HomePage() {
                 <div className="flex flex-wrap gap-2">
                   <span className="px-2 py-1 bg-blue-prime/20 text-blue-light text-[9px] font-bold rounded uppercase tracking-wider">Excel avanzado</span>
                   <span className="px-2 py-1 bg-blue-prime/20 text-blue-light text-[9px] font-bold rounded uppercase tracking-wider">HubSpot</span>
-                  <span className="px-2 py-1 bg-gold/20 text-gold text-[9px] font-bold rounded uppercase tracking-wider">Facturacion</span>
+                  <span className="px-2 py-1 bg-gold/20 text-gold text-[9px] font-bold rounded uppercase tracking-wider">Facturación</span>
                   <span className="px-2 py-1 bg-green-500/10 text-green-400 text-[9px] font-bold rounded uppercase tracking-wider">ES + EN</span>
                 </div>
                 <div className="flex justify-between items-center text-xs">
@@ -169,16 +169,16 @@ export default function HomePage() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <span className="text-blue-prime text-xs font-label uppercase tracking-widest font-extrabold mb-6 block">Nuestra Filosofia</span>
+            <span className="text-blue-prime text-xs font-label uppercase tracking-widest font-extrabold mb-6 block">Nuestra Filosofía</span>
             <h2 className="text-navy font-headline text-4xl md:text-5xl lg:text-6xl leading-tight mb-10">
-              Humanizar la conexion <span className="serif-italic text-blue-deep">global</span>.
+              Humanizar la conexión <span className="serif-italic text-blue-deep">global</span>.
             </h2>
             <div className="space-y-6 text-navy/80 font-light leading-relaxed text-lg">
               <p>
-                No somos una agencia de colocacion. Somos tu partner operativo: seleccionamos, contratamos, supervisamos y reemplazamos si hace falta. Tu no gestionas nada.
+                No somos una agencia de colocación. Somos tu partner operativo: seleccionamos, contratamos, supervisamos y reemplazamos si hace falta. Tú no gestionas nada.
               </p>
               <p>
-                Con presencia en Espana y Miami, conectamos profesionales de alto rendimiento con empresas que necesitan mas capacidad operativa sin inflar la nomina local.
+                Con presencia en España y Miami, conectamos profesionales de alto rendimiento con empresas que necesitan más capacidad operativa sin inflar la nómina local.
               </p>
             </div>
             <div className="mt-12">
@@ -200,8 +200,8 @@ export default function HomePage() {
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-prime/5 blur-[150px] rounded-full" />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-2xl mb-16 lg:mb-20">
-            <span className="text-blue-prime text-xs font-label uppercase tracking-widest font-extrabold mb-6 block">Ventajas Estrategicas</span>
-            <h2 className="text-navy font-headline text-4xl lg:text-5xl leading-tight">Por que elegir la excelencia.</h2>
+            <span className="text-blue-prime text-xs font-label uppercase tracking-widest font-extrabold mb-6 block">Ventajas Estratégicas</span>
+            <h2 className="text-navy font-headline text-4xl lg:text-5xl leading-tight">Por qué elegir la excelencia.</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

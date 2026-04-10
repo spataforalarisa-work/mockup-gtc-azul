@@ -9,7 +9,7 @@ export function Footer() {
         <div className="space-y-6">
           <img src={logoWhite} alt="Global Talent Connections" className="h-8" width={160} height={32} loading="lazy" />
           <p className="text-white/70 text-sm font-light leading-relaxed">
-            Outsourcing estrategico de talento para empresas europeas y americanas.
+            Outsourcing estratégico de talento para empresas europeas y americanas.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export function Footer() {
           2026 Global Talent Connections. Todos los derechos reservados.
         </p>
         <Link className="text-white/40 hover:text-white transition-colors text-[10px] font-label uppercase tracking-widest" to="/politica-de-privacidad">
-          Politica de Privacidad
+          Política de Privacidad
         </Link>
       </div>
     </footer>

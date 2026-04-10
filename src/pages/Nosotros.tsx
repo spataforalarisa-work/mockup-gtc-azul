@@ -68,7 +68,7 @@ export default function NosotrosPage() {
               <span className="italic text-gold">talento global</span>.
             </h1>
             <p className="text-[#8899b0] text-lg md:text-xl max-w-xl leading-relaxed">
-              Facilitamos el flujo de talento entre Europa y el mundo. No buscamos perfiles, disenamos conexiones estrategicas.
+              Facilitamos el flujo de talento entre Europa y el mundo. No buscamos perfiles, diseñamos conexiones estratégicas.
             </p>
           </div>
           <div className="relative lg:absolute lg:right-0 lg:w-1/2 h-[300px] lg:h-full hidden lg:block">
@@ -88,14 +88,14 @@ export default function NosotrosPage() {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-4xl">
             <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl mb-16 text-navy">
-              Nuestra Mision: <span className="text-blue-prime">Humanismo Estrategico</span> en la era global.
+              Nuestra Misión: <span className="text-blue-prime">Humanismo Estratégico</span> en la era global.
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-12 lg:gap-20">
             {[
-              { color: 'bg-blue-prime', title: 'Transparencia Total', text: 'Contratos claros, confidencialidad firmada y operacion auditada. Sabes exactamente que estas contratando y como funciona.' },
-              { color: 'bg-gold', title: 'Resultados Medibles', text: 'Metricas de productividad visibles desde el dia uno. Reportes semanales y seguimiento continuo del rendimiento.' },
-              { color: 'bg-blue-prime', title: 'Seleccion Rigurosa', text: 'Proceso con menos del 5% de tasa de aceptacion. Pruebas tecnicas, entrevistas conductuales y verificacion de referencias.' },
+              { color: 'bg-blue-prime', title: 'Transparencia Total', text: 'Contratos claros, confidencialidad firmada y operación auditada. Sabes exactamente qué estás contratando y cómo funciona.' },
+              { color: 'bg-gold', title: 'Resultados Medibles', text: 'Métricas de productividad visibles desde el día uno. Reportes semanales y seguimiento continuo del rendimiento.' },
+              { color: 'bg-blue-prime', title: 'Selección Rigurosa', text: 'Proceso con menos del 5% de tasa de aceptación. Pruebas técnicas, entrevistas conductuales y verificación de referencias.' },
             ].map(item => (
               <div key={item.title} className="space-y-6">
                 <div className={`w-12 h-[2px] ${item.color}`} />
@@ -143,16 +143,16 @@ export default function NosotrosPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl mb-8 leading-tight text-navy">
-                Presencia Estrategica <span className="italic text-gold">Global</span>.
+                Presencia Estratégica <span className="italic text-gold">Global</span>.
               </h2>
               <p className="text-dark-gray text-lg mb-12 max-w-lg">
-                Operamos desde Espana con entidad legal en Miami para el mercado norteamericano. Talento de toda Latinoamerica.
+                Operamos desde España con entidad legal en Miami para el mercado norteamericano. Talento de toda Latinoamérica.
               </p>
               <div className="grid grid-cols-2 gap-8">
                 <div className="flex items-start gap-4">
                   <span className="w-2 h-2 mt-2 bg-blue-prime rounded-full shadow-[0_0_10px_rgba(59,130,246,0.4)]" />
                   <div>
-                    <h4 className="font-bold text-navy">Espana</h4>
+                    <h4 className="font-bold text-navy">España</h4>
                     <p className="text-dark-gray text-sm">Sede principal</p>
                   </div>
                 </div>
@@ -174,7 +174,7 @@ export default function NosotrosPage() {
                 <div className="font-label text-xs uppercase tracking-widest text-navy/70 mb-8 font-bold">Empresas Activas</div>
                 <div className="h-[1px] w-full bg-navy/10 mb-8" />
                 <div className="text-5xl font-headline text-gold mb-2">2</div>
-                <div className="font-label text-xs uppercase tracking-widest text-navy/70 font-bold">Sedes (Espana + Miami)</div>
+                <div className="font-label text-xs uppercase tracking-widest text-navy/70 font-bold">Sedes (España + Miami)</div>
               </div>
             </div>
           </div>

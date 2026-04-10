@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, ArrowRight } from 'lucide-react'
+import { Menu, X, ArrowRight, Globe } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import logoWhite from '@/assets/logos/LogoLetrasBlancas.png'
 
 const NAV_LINKS = [
@@ -13,6 +14,14 @@ const NAV_LINKS = [
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const { pathname } = useLocation()
+  const { i18n } = useTranslation()
+  const currentLang = i18n.language === 'en' ? 'EN' : 'ES'
+
+  const toggleLang = () => {
+    const newLang = i18n.language === 'es' ? 'en' : 'es'
+    i18n.changeLanguage(newLang)
+    localStorage.setItem('i18nextLng', newLang)
+  }
 
   return (
     <header className="bg-navy/95 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-blue-prime/10">
@@ -23,7 +32,7 @@ export function Header() {
 
       <nav className="flex justify-between items-center px-6 lg:px-8 py-4 w-full max-w-7xl mx-auto">
         <Link to="/" className="flex items-center gap-3" aria-label="Global Talent Connections - Inicio">
-          <img src={logoWhite} alt="Global Talent Connections" className="h-8 lg:h-9" width={180} height={36} />
+          <img src={logoWhite} alt="Global Talent Connections" className="h-8 lg:h-10 w-auto object-contain" />
         </Link>
 
         {/* Desktop nav */}
@@ -44,6 +53,14 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-4">
+          <button
+            onClick={toggleLang}
+            className="flex items-center gap-1.5 text-white/70 hover:text-white transition-colors font-label text-xs tracking-widest uppercase"
+            aria-label={`Cambiar idioma a ${currentLang === 'ES' ? 'inglés' : 'español'}`}
+          >
+            <Globe className="w-4 h-4" />
+            <span className="font-bold">{currentLang}</span>
+          </button>
           <Link
             to="/contacto"
             className="hidden lg:flex items-center gap-2 bg-blue-prime text-white px-6 py-3 rounded-md font-label text-xs tracking-widest uppercase font-bold hover:bg-blue-deep hover:scale-95 transition-all"

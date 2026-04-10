@@ -21,7 +21,7 @@ const ASSISTANT_TYPES = [
 const formSchema = z.object({
   company_name: z.string().min(2, 'Nombre de empresa requerido'),
   contact_name: z.string().min(2, 'Nombre de contacto requerido'),
-  email: z.string().email('Email invalido'),
+  email: z.string().email('Email inválido'),
   phone: z.string().optional(),
   company_size: z.string().optional(),
   assistant_type: z.string().min(1, 'Selecciona un tipo'),
@@ -79,7 +79,7 @@ export default function ContactoPage() {
             Hablemos de lo que <span className="serif-italic text-gold">necesitas</span>.
           </h1>
           <p className="text-white/60 text-lg max-w-2xl">
-            Cuentanos sobre tu empresa y el perfil que buscas. En menos de 48 horas te presentamos candidatos pre-seleccionados.
+            Cuéntanos sobre tu empresa y el perfil que buscas. En menos de 48 horas te presentamos candidatos pre-seleccionados.
           </p>
         </div>
       </section>
@@ -137,7 +137,7 @@ export default function ContactoPage() {
 
                 <div>
                   <label className="block font-label text-xs uppercase tracking-widest text-navy/70 font-bold mb-2">
-                    Telefono
+                    Teléfono
                   </label>
                   <input
                     {...register('phone')}
@@ -151,7 +151,7 @@ export default function ContactoPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block font-label text-xs uppercase tracking-widest text-navy/70 font-bold mb-2">
-                    Tamano de empresa
+                    Tamaño de empresa
                   </label>
                   <select
                     {...register('company_size')}
@@ -185,7 +185,7 @@ export default function ContactoPage() {
 
               <div>
                 <label className="block font-label text-xs uppercase tracking-widest text-navy/70 font-bold mb-2">
-                  Cuentanos mas sobre lo que necesitas
+                  Cuéntanos más sobre lo que necesitas
                 </label>
                 <textarea
                   {...register('description')}

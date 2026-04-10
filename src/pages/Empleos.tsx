@@ -28,7 +28,7 @@ export default function EmpleosPage() {
             Trabaja con empresas <span className="serif-italic text-gold">internacionales</span>.
           </h1>
           <p className="text-white/60 text-lg max-w-2xl mb-10">
-            {activeJobs.length} vacantes activas en modalidad 100% remoto. Encuentra tu proxima oportunidad profesional.
+            {activeJobs.length} vacantes activas en modalidad 100% remoto. Encuentra tu próxima oportunidad profesional.
           </p>
 
           {/* Filtros */}
@@ -37,7 +37,7 @@ export default function EmpleosPage() {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
               <input
                 type="text"
-                placeholder="Buscar por titulo o area..."
+                placeholder="Buscar por título o área..."
                 value={search}
                 onChange={e => setSearch(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/10 border border-white/10 text-white placeholder:text-white/40 focus:ring-2 focus:ring-blue-prime focus:border-blue-prime outline-none"

@@ -7,9 +7,9 @@ export default function NotFoundPage() {
       <div className="absolute top-1/4 left-1/3 w-[400px] h-[400px] bg-blue-prime/[0.06] blur-[120px] rounded-full" />
       <div className="text-center relative z-10 px-6">
         <div className="text-8xl md:text-9xl font-headline text-gold mb-8">404</div>
-        <h1 className="font-headline text-3xl md:text-4xl text-white mb-4">Pagina no encontrada</h1>
+        <h1 className="font-headline text-3xl md:text-4xl text-white mb-4">Página no encontrada</h1>
         <p className="text-white/60 text-lg mb-10 max-w-md mx-auto">
-          La pagina que buscas no existe o fue movida.
+          La página que buscas no existe o fue movida.
         </p>
         <Link
           to="/"
