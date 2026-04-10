@@ -8,7 +8,6 @@ interface Servicio {
   desc: string
   image: string
   alt: string
-  featured?: boolean
 }
 
 const SERVICIOS: Servicio[] = [
@@ -18,7 +17,6 @@ const SERVICIOS: Servicio[] = [
     desc: 'Gestión de agenda, correos, documentos, coordinación de equipos y soporte ejecutivo.',
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80',
     alt: 'Profesional gestionando agenda y documentos en escritorio moderno',
-    featured: true,
   },
   {
     icon: Megaphone,
@@ -26,7 +24,6 @@ const SERVICIOS: Servicio[] = [
     desc: 'Redes sociales, campañas publicitarias, email marketing, SEO y generación de contenido.',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80',
     alt: 'Dashboard de analytics y métricas de marketing digital',
-    featured: true,
   },
   {
     icon: FileSpreadsheet,
@@ -95,11 +92,9 @@ const SERVICIOS: Servicio[] = [
 
 function ServiceCard({ service }: { service: Servicio }) {
   return (
-    <div className={`group relative overflow-hidden rounded-2xl border border-border-soft bg-white hover:shadow-2xl hover:border-blue-prime/30 transition-all duration-300 ${
-      service.featured ? 'lg:col-span-2 lg:grid lg:grid-cols-2' : ''
-    }`}>
+    <div className="group relative overflow-hidden rounded-2xl border border-border-soft bg-white hover:shadow-2xl hover:border-blue-prime/30 transition-all duration-300">
       {/* Imagen */}
-      <div className={`relative overflow-hidden ${service.featured ? 'aspect-[16/10] lg:aspect-auto lg:h-full' : 'aspect-[16/10]'}`}>
+      <div className="relative overflow-hidden aspect-[16/10]">
         <img
           src={service.image}
           alt={service.alt}
