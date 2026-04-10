@@ -48,7 +48,7 @@ export default function HomePage() {
               para empresas que quieren crecer sin complicaciones.
             </h1>
             <p className="text-white/60 text-lg md:text-2xl mb-12 max-w-2xl font-light">
-              Conectamos empresas europeas con profesionales latinoamericanos de alto rendimiento. Selección, gestión y supervisión integral.
+              Conectamos empresas con profesionales de alto rendimiento en modalidad remota. Selección, gestión y supervisión integral.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
