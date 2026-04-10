@@ -15,8 +15,8 @@ const SERVICIOS: Servicio[] = [
     icon: Users,
     title: 'Administrativo',
     desc: 'Gestión de agenda, correos, documentos, coordinación de equipos y soporte ejecutivo.',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80',
-    alt: 'Profesional gestionando agenda y documentos en escritorio moderno',
+    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&q=80',
+    alt: 'Equipo profesional trabajando en oficina moderna',
   },
   {
     icon: Megaphone,
