@@ -1,20 +1,143 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, BarChart3, Code, Palette, Users, FileSpreadsheet, Headphones, Megaphone, BrainCircuit, Building2, Cog, ShoppingCart } from 'lucide-react'
+import { ArrowRight, BarChart3, Code, Palette, Users, FileSpreadsheet, Headphones, Megaphone, BrainCircuit, Building2, Cog, ShoppingCart, type LucideIcon } from 'lucide-react'
 import { RevealSection } from '@/components/shared/RevealSection'
 
-const SERVICIOS = [
-  { icon: Users, title: 'Administrativo', desc: 'Gestión de agenda, correos, documentos, coordinación de equipos y soporte ejecutivo.', accent: 'from-blue-prime/20 to-blue-deep/10', iconBg: 'bg-blue-prime' },
-  { icon: Megaphone, title: 'Marketing Digital', desc: 'Redes sociales, campañas publicitarias, email marketing, SEO y generación de contenido.', accent: 'from-gold/20 to-gold/5', iconBg: 'bg-gold' },
-  { icon: FileSpreadsheet, title: 'Financiero / Contable', desc: 'Facturación, control de gastos, conciliación bancaria, reportes financieros y nóminas.', accent: 'from-blue-prime/20 to-blue-deep/10', iconBg: 'bg-blue-prime' },
-  { icon: Code, title: 'Desarrollo Web', desc: 'Frontend, backend, aplicaciones web, integraciones API y mantenimiento de plataformas.', accent: 'from-blue-light/20 to-blue-prime/5', iconBg: 'bg-blue-deep' },
-  { icon: Palette, title: 'Diseño Gráfico', desc: 'Identidad visual, piezas gráficas, presentaciones, edición de video y motion graphics.', accent: 'from-gold/20 to-gold/5', iconBg: 'bg-gold' },
-  { icon: Headphones, title: 'Atención al Cliente', desc: 'Soporte multicanal, gestión de tickets, onboarding de clientes y seguimiento post-venta.', accent: 'from-blue-prime/20 to-blue-deep/10', iconBg: 'bg-blue-prime' },
-  { icon: BrainCircuit, title: 'Automatización / IA', desc: 'Workflows automatizados, chatbots, análisis de datos con IA e integraciones inteligentes.', accent: 'from-blue-light/20 to-blue-prime/5', iconBg: 'bg-blue-deep' },
-  { icon: Building2, title: 'Arquitectura', desc: 'Modelado BIM, planos técnicos, renders 3D, presupuestos y gestión de proyectos.', accent: 'from-gold/20 to-gold/5', iconBg: 'bg-gold' },
-  { icon: ShoppingCart, title: 'E-commerce / Ventas', desc: 'Gestión de tiendas online, catálogo de productos, atención a compradores y logística.', accent: 'from-blue-prime/20 to-blue-deep/10', iconBg: 'bg-blue-prime' },
-  { icon: BarChart3, title: 'Gestión Operativa', desc: 'Coordinación de procesos, seguimiento de KPIs, reportes ejecutivos y mejora continua.', accent: 'from-blue-light/20 to-blue-prime/5', iconBg: 'bg-blue-deep' },
-  { icon: Cog, title: 'Técnico Especializado', desc: 'Soporte IT, administración de sistemas, bases de datos y seguridad informática.', accent: 'from-gold/20 to-gold/5', iconBg: 'bg-gold' },
+interface Servicio {
+  icon: LucideIcon
+  title: string
+  desc: string
+  image: string
+  alt: string
+  featured?: boolean
+}
+
+const SERVICIOS: Servicio[] = [
+  {
+    icon: Users,
+    title: 'Administrativo',
+    desc: 'Gestión de agenda, correos, documentos, coordinación de equipos y soporte ejecutivo.',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80',
+    alt: 'Profesional gestionando agenda y documentos en escritorio moderno',
+    featured: true,
+  },
+  {
+    icon: Megaphone,
+    title: 'Marketing Digital',
+    desc: 'Redes sociales, campañas publicitarias, email marketing, SEO y generación de contenido.',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80',
+    alt: 'Dashboard de analytics y métricas de marketing digital',
+    featured: true,
+  },
+  {
+    icon: FileSpreadsheet,
+    title: 'Financiero / Contable',
+    desc: 'Facturación, control de gastos, conciliación bancaria, reportes financieros y nóminas.',
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80',
+    alt: 'Reportes financieros y calculadora en escritorio profesional',
+  },
+  {
+    icon: Code,
+    title: 'Desarrollo Web',
+    desc: 'Frontend, backend, aplicaciones web, integraciones API y mantenimiento de plataformas.',
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80',
+    alt: 'Desarrollador trabajando con código en pantalla',
+  },
+  {
+    icon: Palette,
+    title: 'Diseño Gráfico',
+    desc: 'Identidad visual, piezas gráficas, presentaciones, edición de video y motion graphics.',
+    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80',
+    alt: 'Herramientas de diseño y paleta de colores en workspace creativo',
+  },
+  {
+    icon: Headphones,
+    title: 'Atención al Cliente',
+    desc: 'Soporte multicanal, gestión de tickets, onboarding de clientes y seguimiento post-venta.',
+    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80',
+    alt: 'Profesional con headset atendiendo clientes',
+  },
+  {
+    icon: BrainCircuit,
+    title: 'Automatización / IA',
+    desc: 'Workflows automatizados, chatbots, análisis de datos con IA e integraciones inteligentes.',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80',
+    alt: 'Interfaz de inteligencia artificial y automatización',
+  },
+  {
+    icon: Building2,
+    title: 'Arquitectura',
+    desc: 'Modelado BIM, planos técnicos, renders 3D, presupuestos y gestión de proyectos.',
+    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80',
+    alt: 'Planos arquitectónicos y maqueta de edificio moderno',
+  },
+  {
+    icon: ShoppingCart,
+    title: 'E-commerce / Ventas',
+    desc: 'Gestión de tiendas online, catálogo de productos, atención a compradores y logística.',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80',
+    alt: 'Gestión de tienda online y empaquetado de productos',
+  },
+  {
+    icon: BarChart3,
+    title: 'Gestión Operativa',
+    desc: 'Coordinación de procesos, seguimiento de KPIs, reportes ejecutivos y mejora continua.',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
+    alt: 'Dashboard con KPIs y gráficos de rendimiento empresarial',
+  },
+  {
+    icon: Cog,
+    title: 'Técnico Especializado',
+    desc: 'Soporte IT, administración de sistemas, bases de datos y seguridad informática.',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80',
+    alt: 'Sala de servidores e infraestructura tecnológica',
+  },
 ]
+
+function ServiceCard({ service }: { service: Servicio }) {
+  return (
+    <div className={`group relative overflow-hidden rounded-2xl border border-border-soft bg-white hover:shadow-2xl hover:border-blue-prime/30 transition-all duration-300 ${
+      service.featured ? 'lg:col-span-2 lg:grid lg:grid-cols-2' : ''
+    }`}>
+      {/* Imagen */}
+      <div className={`relative overflow-hidden ${service.featured ? 'aspect-[16/10] lg:aspect-auto lg:h-full' : 'aspect-[16/10]'}`}>
+        <img
+          src={service.image}
+          alt={service.alt}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-navy/10 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+        <div className="absolute bottom-3 left-3">
+          <div className="w-9 h-9 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg">
+            <service.icon className="w-4.5 h-4.5 text-blue-prime" />
+          </div>
+        </div>
+      </div>
+
+      {/* Contenido */}
+      <div className="p-6 lg:p-7 flex flex-col justify-between">
+        <div>
+          <h3 className="text-navy font-headline text-xl lg:text-2xl mb-3 group-hover:text-blue-prime transition-colors">
+            {service.title}
+          </h3>
+          <p className="text-dark-gray text-sm leading-relaxed">
+            {service.desc}
+          </p>
+        </div>
+
+        <div className="mt-5 pt-4 border-t border-border-soft/50">
+          <Link
+            to="/contacto"
+            className="text-blue-prime text-xs font-label uppercase tracking-widest font-bold flex items-center gap-2 hover:gap-3 transition-all"
+          >
+            Solicitar este perfil
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export default function ServiciosPage() {
   return (
@@ -35,39 +158,8 @@ export default function ServiciosPage() {
       <RevealSection className="py-20 lg:py-28 bg-off-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {SERVICIOS.map((s, i) => (
-              <div
-                key={s.title}
-                className={`relative overflow-hidden rounded-2xl border border-border-soft hover:shadow-2xl hover:border-blue-prime/30 transition-all duration-300 group bg-white ${
-                  i === 0 ? 'md:col-span-2 lg:col-span-1' : ''
-                }`}
-              >
-                {/* Gradient accent bar */}
-                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${s.accent} opacity-0 group-hover:opacity-100 transition-opacity`} />
-
-                <div className="p-8 lg:p-9">
-                  <div className="flex items-start gap-5">
-                    <div className={`w-12 h-12 rounded-xl ${s.iconBg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rounded-2xl transition-all duration-300 shadow-lg`}>
-                      <s.icon className="w-5 h-5 text-white" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-navy font-headline text-xl mb-2 group-hover:text-blue-prime transition-colors">{s.title}</h3>
-                      <p className="text-dark-gray text-sm leading-relaxed">{s.desc}</p>
-                    </div>
-                  </div>
-
-                  {/* Hover reveal link */}
-                  <div className="mt-5 pt-4 border-t border-border-soft/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Link
-                      to="/contacto"
-                      className="text-blue-prime text-xs font-label uppercase tracking-widest font-bold flex items-center gap-2 hover:gap-3 transition-all"
-                    >
-                      Solicitar este perfil
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
+            {SERVICIOS.map(s => (
+              <ServiceCard key={s.title} service={s} />
             ))}
           </div>
 
