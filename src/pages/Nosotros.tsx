@@ -33,7 +33,7 @@ function TeamCard({ member, size = 'lg' }: { member: TeamMember; size?: 'lg' | '
           <p className={`font-label ${isLg ? 'text-xs' : 'text-[10px]'} uppercase tracking-widest text-blue-light font-bold ${isLg ? 'mb-2' : ''}`}>
             {member.rol}
           </p>
-          {isLg && <p className="text-gold text-sm">{member.email}</p>}
+          <p className="text-gold text-sm">{member.email}</p>
         </div>
         {member.linkedin && (
           <a
@@ -129,7 +129,7 @@ export default function NosotrosPage() {
             <span className="font-label uppercase tracking-widest text-white/60 text-xs font-bold block">Equipo Operativo</span>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
             {operativo.map(member => (
               <TeamCard key={member.id} member={member} size="sm" />
             ))}
