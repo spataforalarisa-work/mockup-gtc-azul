@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="bg-navy-soft border-t border-blue-prime/20">
       <div className="max-w-7xl mx-auto px-8 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-12 py-20">
         <div className="space-y-6">
-          <img src={logoWhite} alt="Global Talent Connections" className="h-8" width={160} height={32} loading="lazy" />
+          <img src={logoWhite} alt="Global Talent Connections" className="h-10 w-auto object-contain" loading="lazy" />
           <p className="text-white/70 text-sm font-light leading-relaxed">
             Outsourcing estratégico de talento para empresas europeas y americanas.
           </p>
