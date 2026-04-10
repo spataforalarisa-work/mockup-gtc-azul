@@ -39,7 +39,7 @@ export const equipo: TeamMember[] = [
   { id: 7, nombre: 'Ana Martinez', foto: fotoAna, rol: 'Marketing & Sales Lead', rolEn: 'Marketing & Sales Lead', email: 'amartinez@internationalgtc.com', linkedin: '', nivel: 'lider' },
 
   // OPERATIVO
-  { id: 8, nombre: 'Sebastian Castillo', foto: fotoSebastian, rol: 'Quality Lead', rolEn: 'Quality Lead', email: 'sacevedo@internationalgtc.com', linkedin: '', nivel: 'operativo' },
+  { id: 8, nombre: 'Sebastián Acevedo', foto: fotoSebastian, rol: 'Quality & Ops Lead', rolEn: 'Quality & Ops Lead', email: 'sacevedo@internationalgtc.com', linkedin: '', nivel: 'lider' },
   { id: 9, nombre: 'Reyna Contreras', foto: fotoReyna, rol: 'HR Analyst', rolEn: 'HR Analyst', email: 'rcontreras@internationalgtc.com', linkedin: '', nivel: 'operativo' },
   { id: 10, nombre: 'Larisa Spatafora', foto: fotoLarisa, rol: 'Data & AI Analyst', rolEn: 'Data & AI Analyst', email: 'lspatafora@internationalgtc.com', linkedin: '', nivel: 'operativo' },
   { id: 11, nombre: 'Nelson Alonso', foto: fotoNelson, rol: 'AI & Automation', rolEn: 'AI & Automation', email: 'nalonso@internationalgtc.com', linkedin: '', nivel: 'operativo' },
