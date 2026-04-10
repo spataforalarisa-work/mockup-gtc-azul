@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 97%;
+    --foreground: 215 50% 7%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 50% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 50% 7%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 38 50% 54%;
+    --secondary-foreground: 215 50% 7%;
+    --muted: 30 18% 93%;
+    --muted-foreground: 210 20% 40%;
+    --accent: 38 50% 54%;
+    --accent-foreground: 215 50% 7%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-off-white font-body text-navy antialiased overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(10, 22, 40, 0.55);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .blue-overlay {
+    position: relative;
+  }
+  .blue-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 64, 175, 0.06);
+    pointer-events: none;
+  }
+
+  .warm-overlay {
+    position: relative;
+  }
+  .warm-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(59, 130, 246, 0.04);
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .group:hover .warm-overlay::after {
+    opacity: 0;
+  }
+
+  .serif-italic {
+    font-style: italic;
+  }
+}

@@ -1,0 +1,45 @@
+import { lazy, Suspense } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
+import { Layout } from '@/components/layout/Layout'
+import { ScrollToTop } from '@/components/shared/ScrollToTop'
+import HomePage from '@/pages/Index'
+
+const Nosotros = lazy(() => import('@/pages/Nosotros'))
+const Contacto = lazy(() => import('@/pages/Contacto'))
+const Servicios = lazy(() => import('@/pages/Servicios'))
+const Empleos = lazy(() => import('@/pages/Empleos'))
+const DetallesDeEmpleo = lazy(() => import('@/pages/DetallesDeEmpleo'))
+const NotFound = lazy(() => import('@/pages/NotFound'))
+
+function PageLoader() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-off-white">
+      <div className="w-8 h-8 border-2 border-blue-prime border-t-transparent rounded-full animate-spin" />
+    </div>
+  )
+}
+
+export default function App() {
+  return (
+    <>
+      <ScrollToTop />
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/nosotros" element={<Nosotros />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/servicios" element={<Servicios />} />
+            <Route path="/empleos" element={<Empleos />} />
+            <Route path="/empleos/:id" element={<DetallesDeEmpleo />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </Suspense>
+      <Analytics />
+      <SpeedInsights />
+    </>
+  )
+}
