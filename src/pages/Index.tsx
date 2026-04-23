@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, ShieldCheck, Star, Zap, Brain, Handshake } from 'lucide-react'
 import { RevealSection } from '@/components/shared/RevealSection'
+import Testimonials from '@/components/Testimonials'
 
 const STATS = [
-  { value: '49', label: 'empresas activas', color: 'text-blue-prime' },
-  { value: '103', label: 'profesionales', color: 'text-blue-prime' },
-  { value: '60%', label: 'ahorro promedio', color: 'text-gold' },
+  { value: '53', label: 'empresas activas', color: 'text-blue-prime' },
+  { value: '111', label: 'profesionales', color: 'text-blue-prime' },
+  { value: '50%', label: 'ahorro promedio', color: 'text-gold' },
   { value: '95%', label: 'retención', color: 'text-gold' },
 ]
 
@@ -194,6 +195,9 @@ export default function HomePage() {
           </div>
         </div>
       </RevealSection>
+
+      {/* TESTIMONIOS */}
+      <Testimonials />
 
       {/* VENTAJAS */}
       <RevealSection className="py-24 lg:py-32 bg-off-white relative overflow-hidden">
