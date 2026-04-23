@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, ShieldCheck, Star, Zap, Brain, Handshake } from 'lucide-react'
 import { RevealSection } from '@/components/shared/RevealSection'
+import Testimonials from '@/components/Testimonials'
 
-const STATS = [
-  { value: '49', label: 'empresas activas', color: 'text-blue-prime' },
-  { value: '103', label: 'profesionales', color: 'text-blue-prime' },
-  { value: '60%', label: 'ahorro promedio', color: 'text-gold' },
+const stats = [
+  { value: '53', label: 'empresas activas', color: 'text-blue-prime' },
+  { value: '111', label: 'profesionales', color: 'text-blue-prime' },
+  { value: '50%', label: 'ahorro promedio', color: 'text-gold' },
   { value: '95%', label: 'retención', color: 'text-gold' },
 ]
 
@@ -124,7 +125,7 @@ export default function HomePage() {
       {/* STATS BAR */}
       <RevealSection className="relative z-20 -mt-12 max-w-5xl mx-auto px-6 lg:px-8">
         <div className="bg-white rounded-xl py-10 lg:py-12 px-8 lg:px-12 grid grid-cols-2 md:grid-cols-4 gap-8 shadow-2xl border border-border-soft">
-          {STATS.map((stat, i) => (
+          {stats.map((stat, i) => (
             <div key={stat.label} className={`text-center ${i > 0 ? 'md:border-l md:border-border-soft' : ''}`}>
               <div className={`${stat.color} text-3xl lg:text-4xl font-headline font-bold mb-1`}>{stat.value}</div>
               <div className="text-navy/70 text-[10px] font-label uppercase tracking-widest font-extrabold">{stat.label}</div>
@@ -194,6 +195,9 @@ export default function HomePage() {
           </div>
         </div>
       </RevealSection>
+
+      {/* TESTIMONIOS */}
+      <Testimonials />
 
       {/* VENTAJAS */}
       <RevealSection className="py-24 lg:py-32 bg-off-white relative overflow-hidden">
