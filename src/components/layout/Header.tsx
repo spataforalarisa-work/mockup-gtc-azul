@@ -6,8 +6,10 @@ import logoWhite from '@/assets/logos/LogoLetrasBlancas.png'
 
 const NAV_LINKS = [
   { label: 'Servicios', href: '/servicios' },
-  { label: 'Empleos', href: '/empleos' },
   { label: 'Nosotros', href: '/nosotros' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Calculadora', href: '/calculadora' },
+  { label: 'Empleos', href: '/empleos' },
   { label: 'Contacto', href: '/contacto' },
 ]
 
@@ -63,7 +65,7 @@ export function Header() {
           </button>
           <Link
             to="/contacto"
-            className="hidden lg:flex items-center gap-2 bg-blue-prime text-white px-6 py-3 rounded-md font-label text-xs tracking-widest uppercase font-bold hover:bg-blue-deep hover:scale-95 transition-all"
+            className="hidden lg:flex items-center gap-2 bg-coral text-white px-6 py-3 rounded-md font-label text-xs tracking-widest uppercase font-bold hover:bg-coral/90 hover:scale-95 transition-all shadow-lg shadow-coral/20"
           >
             Agendar call
             <ArrowRight className="w-4 h-4" />

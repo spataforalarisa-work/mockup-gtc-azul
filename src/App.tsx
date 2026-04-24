@@ -11,6 +11,9 @@ const Contacto = lazy(() => import('@/pages/Contacto'))
 const Servicios = lazy(() => import('@/pages/Servicios'))
 const Empleos = lazy(() => import('@/pages/Empleos'))
 const DetallesDeEmpleo = lazy(() => import('@/pages/DetallesDeEmpleo'))
+const Blog = lazy(() => import('@/pages/Blog'))
+const BlogPost = lazy(() => import('@/pages/BlogPost'))
+const CalculadoraAhorro = lazy(() => import('@/pages/CalculadoraAhorro'))
 const NotFound = lazy(() => import('@/pages/NotFound'))
 
 function PageLoader() {
@@ -34,6 +37,9 @@ export default function App() {
             <Route path="/servicios" element={<Servicios />} />
             <Route path="/empleos" element={<Empleos />} />
             <Route path="/empleos/:id" element={<DetallesDeEmpleo />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/calculadora" element={<CalculadoraAhorro />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
