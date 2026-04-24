@@ -65,7 +65,6 @@ const VideoModal: FC<{ testimonio: Testimonio | null; cerrar: () => void }> = ({
       role="dialog"
       aria-modal="true"
     >
-      {/* Botón volver prominente arriba a la izquierda */}
       <div className="w-full max-w-4xl mb-4">
         <button
           onClick={cerrar}
@@ -99,7 +98,6 @@ const TestimonioCard: FC<{ testimonio: Testimonio; abrirModal: (t: Testimonio) =
 
   return (
     <div className="bg-white rounded-xl border border-border-soft hover:border-blue-prime/30 hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-      {/* Video inline con controles */}
       <div className="relative w-full aspect-video bg-navy group">
         <video
           ref={videoRef}
@@ -109,7 +107,6 @@ const TestimonioCard: FC<{ testimonio: Testimonio; abrirModal: (t: Testimonio) =
           preload="metadata"
           className="w-full h-full object-cover"
         />
-        {/* Botón expandir, visible en hover */}
         <button
           onClick={() => abrirModal(testimonio)}
           className="absolute top-2 right-2 bg-navy/70 hover:bg-blue-prime text-white rounded-md p-1.5 opacity-0 group-hover:opacity-100 transition-all duration-200"
@@ -151,8 +148,8 @@ const Testimonials: FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {TESTIMONIOS.map((t, i) => (
-            <TestimonioCard key={i} testimonio={t} abrirModal={setTestimonioAbierto} />
+          {TESTIMONIOS.map((tm, i) => (
+            <TestimonioCard key={i} testimonio={tm} abrirModal={setTestimonioAbierto} />
           ))}
         </div>
       </div>
