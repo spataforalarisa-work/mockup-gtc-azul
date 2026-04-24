@@ -35,7 +35,7 @@ export const equipo: TeamMember[] = [
   { id: 3, nombre: 'Antonio Cabello', foto: fotoAntonio, rol: 'Head of Finance', rolEn: 'Head of Finance', email: 'acabello@internationalgtc.com', linkedin: 'https://www.linkedin.com/in/antonio-jesus-cabello-barea/', nivel: 'lider' },
   { id: 4, nombre: 'M. Pilar Marin', foto: fotoPilar, rol: 'HR & Commercial Lead', rolEn: 'HR & Commercial Lead', email: 'mmarin@internationalgtc.com', linkedin: 'https://www.linkedin.com/in/mariangel-pilar-marin-a786a8148/', nivel: 'lider' },
   { id: 5, nombre: 'Ariel Jimenez', foto: fotoAriel, rol: 'AI & Automation Lead', rolEn: 'AI & Automation Lead', email: 'ajimenez@internationalgtc.com', linkedin: '', nivel: 'lider' },
-  { id: 6, nombre: 'Gladymar Torres', foto: fotoGladymar, rol: 'HR Business Partner', rolEn: 'HR Business Partner', email: 'gtorres@internationalgtc.com', linkedin: 'https://www.linkedin.com/in/gladymar-torres-825827188/', nivel: 'lider' },
+  { id: 6, nombre: 'Gladymar Torres', foto: fotoGladymar, rol: 'HR Business Partner', rolEn: 'HR Business Partner', email: 'gtorres@internationalgtc.com', linkedin: 'https://www.linkedin.com/in/gladymar-torres-825827188/', nivel: 'operativo' },
   { id: 7, nombre: 'Ana Martinez', foto: fotoAna, rol: 'Marketing & Sales Lead', rolEn: 'Marketing & Sales Lead', email: 'amartinez@internationalgtc.com', linkedin: '', nivel: 'lider' },
 
   // OPERATIVO
