@@ -7,19 +7,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Brand palette (mockup azul)
+        // Brand palette — Global Talent Connections (ver guia-diseno-globaltalent.md)
         navy: {
-          DEFAULT: '#0a1628',
-          soft: '#0f1d30',
+          DEFAULT: '#062E55',
+          soft: '#0A2444',
         },
-        gold: '#C9A84C',
-        'blue-prime': '#3b82f6',
-        'blue-deep': '#1e40af',
-        'blue-light': '#60a5fa',
+        coral: '#FF6B47',
+        gold: '#F59E0B',
+        'blue-prime': '#2280AD',
+        'blue-deep': '#1A6590',
+        'blue-light': '#4AADDB',
         cream: '#F0EDE8',
         'off-white': '#F7F7F7',
-        'dark-gray': '#37516b',
-        'border-soft': '#d9e2ec',
+        'dark-gray': '#37516B',
+        'border-soft': '#D9E2EC',
         // shadcn/ui semantic tokens
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -56,8 +57,8 @@ export default {
         },
       },
       fontFamily: {
-        headline: ['Newsreader', 'serif'],
-        body: ['Inter', 'sans-serif'],
+        headline: ['Montserrat', 'sans-serif'],
+        body: ['Lato', 'sans-serif'],
         label: ['Inter', 'sans-serif'],
       },
       borderRadius: {
