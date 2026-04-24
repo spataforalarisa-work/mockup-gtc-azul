@@ -7,7 +7,7 @@ interface Testimonio {
   cargo: string
   texto: string
   video: string
-  thumbnail: string
+  thumbnail: string | null
 }
 
 const CLD = 'https://res.cloudinary.com/dax2r7ro2'
@@ -60,7 +60,11 @@ const VideoModal: FC<{ testimonio: Testimonio | null; cerrar: () => void }> = ({
   if (!testimonio) return null
 
   return (
-    <div className="fixed inset-0 bg-navy/95 backdrop-blur-sm flex flex-col items-center justify-center z-50 p-4" role="dialog" aria-modal="true">
+    <div
+      className="fixed inset-0 bg-navy/95 backdrop-blur-sm flex flex-col items-center justify-center z-50 p-4"
+      role="dialog"
+      aria-modal="true"
+    >
       <div className="w-full max-w-4xl mb-4">
         <button
           onClick={cerrar}
@@ -70,9 +74,15 @@ const VideoModal: FC<{ testimonio: Testimonio | null; cerrar: () => void }> = ({
           Volver
         </button>
       </div>
+
       <div className="relative bg-navy-soft rounded-2xl p-4 max-w-4xl w-full border border-blue-prime/30 shadow-2xl">
         <div className="aspect-video w-full rounded-xl overflow-hidden">
-          <video src={testimonio.video} controls autoPlay className="w-full h-full bg-navy" />
+          <video
+            src={testimonio.video}
+            controls
+            autoPlay
+            className="w-full h-full bg-navy"
+          />
         </div>
         <div className="mt-4 px-2">
           <p className="text-off-white font-headline text-lg">{testimonio.nombre}</p>
@@ -92,7 +102,7 @@ const TestimonioCard: FC<{ testimonio: Testimonio; abrirModal: (t: Testimonio) =
         <video
           ref={videoRef}
           src={testimonio.video}
-          poster={testimonio.thumbnail}
+          poster={testimonio.thumbnail ?? undefined}
           controls
           preload="metadata"
           className="w-full h-full object-cover"
@@ -106,6 +116,7 @@ const TestimonioCard: FC<{ testimonio: Testimonio; abrirModal: (t: Testimonio) =
           <Maximize2 size={16} />
         </button>
       </div>
+
       <div className="p-5 flex flex-col flex-1">
         <Quote size={18} className="text-blue-prime mb-2" />
         <p className="text-dark-gray font-light leading-relaxed text-sm flex-1">
@@ -135,12 +146,14 @@ const Testimonials: FC = () => {
             Lo que dicen <span className="serif-italic text-blue-deep">nuestros clientes</span>.
           </h2>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {TESTIMONIOS.map((tm, i) => (
             <TestimonioCard key={i} testimonio={tm} abrirModal={setTestimonioAbierto} />
           ))}
         </div>
       </div>
+
       <VideoModal testimonio={testimonioAbierto} cerrar={() => setTestimonioAbierto(null)} />
     </RevealSection>
   )

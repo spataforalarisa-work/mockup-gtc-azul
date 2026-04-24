@@ -176,6 +176,9 @@ export default function HomePage() {
         </div>
       </RevealSection>
 
+      {/* TESTIMONIOS */}
+      <Testimonials />
+
       {/* VENTAJAS */}
       <RevealSection className="py-24 lg:py-32 bg-off-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-prime/5 blur-[150px] rounded-full" />
