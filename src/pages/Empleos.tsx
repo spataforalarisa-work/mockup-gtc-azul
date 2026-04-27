@@ -3,10 +3,13 @@ import { Link } from 'react-router-dom'
 import { Search, MapPin, Briefcase } from 'lucide-react'
 import { JOBS, DEPARTMENTS } from '@/data/jobs'
 import { RevealSection } from '@/components/shared/RevealSection'
+import { useTranslation } from 'react-i18next'
 
 export default function EmpleosPage() {
   const [search, setSearch] = useState('')
   const [dept, setDept] = useState('')
+  const { i18n } = useTranslation()
+  const en = i18n.language === 'en'
 
   const activeJobs = useMemo(() => JOBS.filter(j => j.active), [])
 
@@ -23,12 +26,21 @@ export default function EmpleosPage() {
       <section className="bg-navy pt-32 pb-20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-prime/[0.06] blur-[120px] rounded-full -mr-32" />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <span className="text-blue-light text-xs font-label uppercase tracking-widest font-bold mb-4 block">Oportunidades</span>
+          <span className="text-blue-light text-xs font-label uppercase tracking-widest font-bold mb-4 block">
+            {en ? 'Opportunities' : 'Oportunidades'}
+          </span>
           <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl text-white mb-6">
-            Trabaja con empresas <span className="serif-italic text-gold">internacionales</span>.
+            {en ? (
+              <>Work with <span className="serif-italic text-gold">international</span> companies.</>
+            ) : (
+              <>Trabaja con empresas <span className="serif-italic text-gold">internacionales</span>.</>
+            )}
           </h1>
           <p className="text-white/60 text-lg max-w-2xl mb-10">
-            {activeJobs.length} vacantes activas en modalidad 100% remoto. Encuentra tu próxima oportunidad profesional.
+            {en
+              ? `${activeJobs.length} active vacancies in 100% remote mode. Find your next professional opportunity.`
+              : `${activeJobs.length} vacantes activas en modalidad 100% remoto. Encuentra tu próxima oportunidad profesional.`
+            }
           </p>
 
           {/* Filtros */}
@@ -37,7 +49,7 @@ export default function EmpleosPage() {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
               <input
                 type="text"
-                placeholder="Buscar por título o área..."
+                placeholder={en ? 'Search by title or area...' : 'Buscar por título o área...'}
                 value={search}
                 onChange={e => setSearch(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/10 border border-white/10 text-white placeholder:text-white/40 focus:ring-2 focus:ring-blue-prime focus:border-blue-prime outline-none"
@@ -48,7 +60,7 @@ export default function EmpleosPage() {
               onChange={e => setDept(e.target.value)}
               className="px-4 py-3 rounded-lg bg-white/10 border border-white/10 text-white focus:ring-2 focus:ring-blue-prime outline-none"
             >
-              <option value="" className="text-navy">Todos los departamentos</option>
+              <option value="" className="text-navy">{en ? 'All departments' : 'Todos los departamentos'}</option>
               {DEPARTMENTS.map(d => (
                 <option key={d} value={d} className="text-navy">{d}</option>
               ))}
@@ -61,7 +73,9 @@ export default function EmpleosPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {filtered.length === 0 ? (
             <div className="text-center py-20">
-              <p className="text-dark-gray text-lg">No se encontraron vacantes con esos filtros.</p>
+              <p className="text-dark-gray text-lg">
+                {en ? 'No vacancies found with those filters.' : 'No se encontraron vacantes con esos filtros.'}
+              </p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
